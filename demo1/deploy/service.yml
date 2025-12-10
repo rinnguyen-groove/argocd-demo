@@ -4,7 +4,7 @@ metadata:
   name: todo-service
 spec:
   selector:
-    app: myapp
+    app: todo
   ports:
   - port: 8000
     protocol: TCP
