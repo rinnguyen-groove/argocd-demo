@@ -1,0 +1,9 @@
+{
+  "yaml.schemas": {
+    "kubernetes": "*.yaml"
+  },
+  "files.associations": {
+    "*-patch.yml": "yaml"
+  },
+  "yaml.validate": true
+}
