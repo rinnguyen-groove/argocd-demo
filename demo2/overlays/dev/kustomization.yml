@@ -8,7 +8,7 @@ namePrefix: dev-
 nameSuffix: ""
 
 patches:
-  - path: deployment-patch.yml
+  - path: replica-patch.yml
     target:
       kind: Deployment
       name: todo
