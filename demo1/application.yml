@@ -10,7 +10,7 @@ spec:
     repoURL: https://github.com/rinnguyen-groove/argocd-demo.git
     targetRevision: HEAD
     path: demo1/deploy
-  destination: 
+  destination:
     server: https://kubernetes.default.svc
     namespace: demo1
 

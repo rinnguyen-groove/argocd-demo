@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: todo-argo-app
+  name: prod-todo-argo-app
   namespace: argocd
 spec:
   project: default
@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: demo2/overlays/prod
   destination: 
-    server: https://kubernetes.default.svc
+    server: https://192.168.147.5:6443
     namespace: demo2-prod
 
   syncPolicy:
