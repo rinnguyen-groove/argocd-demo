@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-todo-argo-app
+  name: frontend-app
   namespace: argocd
 spec:
   project: default
@@ -9,15 +9,15 @@ spec:
   source:
     repoURL: https://github.com/rinnguyen-groove/argocd-demo.git
     targetRevision: HEAD
-    path: demo2/overlays/prod
-  destination: 
-    server: https://192.168.147.5:6443
-    namespace: demo2-prod
+    path: demo3/workloads/frontend
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: frontend
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
-
+      - CreateNamespace=true
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true
