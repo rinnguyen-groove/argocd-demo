@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: demo2/overlays/prod
   destination: 
-    server: https://192.168.147.5:6443
+    server: https://kubernetes.default.svc
     namespace: demo2-prod
 
   syncPolicy:
